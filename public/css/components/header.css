@@ -3,8 +3,14 @@
   background: var(--primary-color);
   padding: 0 var(--page-horizontal-padding);
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 .header h1 {
   color: #fff;
+}
+
+.login {
+  color: #fff;
+  font-weight: bold;
 }
