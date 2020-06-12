@@ -1,11 +1,26 @@
 <!-- note that all of our page templates will include a header and footer partial -->
 <%- include('../partials/header') %>
-<div class="home-page">
+<div class="homepage">
   <h2>All Facespace members</h2>
   <ul class="homepage__all">
     <% users.forEach(user => { %>
     <li class="homepage__all--user">
-      <img src="<%= user.avatarUrl %>" />
+      <div class="userbox">
+        <a href="users/<%= user._id %>">
+          <img src="<%= user.avatarUrl %>" />
+        </a>
+
+        <% if (Object.keys(currentUser).length != 0) { %>
+
+        <% if (currentUser.friends.includes(user._id)) { %>
+
+        <p>friend</p>
+
+        <% } %>
+
+        <% } %>
+
+      </div>
     </li>
     <% }) %>
   </ul>

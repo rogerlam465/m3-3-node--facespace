@@ -11,5 +11,11 @@
   margin: 0 4px;
 }
 .homepage__all--user img {
-  width: 120px;
+  width: 150px;
+  border: 2px var(--primary-color) solid;
+  transition: 0.5s;
+}
+
+.homepage__all--user img:hover {
+  border: 5px var(--primary-color) solid;
 }

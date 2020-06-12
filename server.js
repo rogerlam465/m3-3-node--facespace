@@ -36,11 +36,15 @@ const handleProfilePage = (req, res) => {
     })
   })
 
-  res.status(200).render('pages/profile', { user: userData, friends: friends });
+  res.status(200).render('pages/profile', { user: userData, friends: friends, currentUser: currentUser });
 }
 
 const handleSignin = (req, res) => {
-  res.render('pages/signin');
+  if (Object.keys(currentUser).length === 0) {
+    res.render('pages/signin', { currentUser: currentUser });
+  } else {
+    res.redirect('/');
+  }
 }
 
 const handleName = (req, res) => {

@@ -10,6 +10,10 @@
   color: #fff;
 }
 
+.header a {
+  text-decoration: none;
+}
+
 .login {
   color: #fff;
   font-weight: bold;

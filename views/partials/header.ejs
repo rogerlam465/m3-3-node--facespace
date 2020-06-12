@@ -9,14 +9,17 @@
 
 <body>
   <header class="header">
-    <h1 class='site-title'>Facespace</h1>
-    <% if (currentUser) { %>
+    <a href="/">
+      <h1 class='site-title'>Facespace</h1>
+    </a>
+
+    <% if (Object.keys(currentUser) != 0) { %>
 
     <span class='login'>Howdy, <%= currentUser.name %></span>
 
     <% } else { %>
 
-    <span class='login'>Sign in</span>
+    <a href="/signin" class='login'>Sign in</a>
 
     <% } %>
 

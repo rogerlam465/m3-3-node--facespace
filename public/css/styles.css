@@ -8,3 +8,19 @@
 
 /* Place all of your custom CSS below. 😃 */
 
+.userbox {
+    position: relative;
+}
+
+.homepage__all--user p {
+    transform: rotate(45deg);
+    background: #cc5500;
+    color: #fff;
+    position: absolute;
+    bottom: 120px;
+    left: 50px;
+    text-align: center;
+    width: calc(100% - 4px);
+    font-size: 16px;
+    overflow: hidden;
+  }
